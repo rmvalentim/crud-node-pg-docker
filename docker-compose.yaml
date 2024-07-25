@@ -1,0 +1,13 @@
+version: "3"
+services: 
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: 12345678
+      POSTGRES_USER: rafael
+      POSTGRES_DB: dbcrud
+  app:
+    image: crud-node-pg-docker
+    ports:
+      - 13000:3000
+      
